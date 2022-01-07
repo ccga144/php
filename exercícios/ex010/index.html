@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../_css/form.css">
+</head>
+<body>
+    <div class="container">
+        <form method="get" action="verify.php"  autocomplete="off">
+            <span>Notas:</span> 
+            <div>
+                <span>Nota 1</span>
+                <input type="text" id="n1" name="n1">
+            </div>
+            <div>
+                <span>Nota 2</span>
+                <input type="text" id="n2" name="n2">
+            </div>
+            <div>
+                <span>Nota 3</span>
+                <input type="text" id="n3" name="n3">
+            </div>
+            <button onclick="gerar()" type="submit">Enviar</button>
+        </form>
+    </div>
+    <!--<script>
+        function gerar(){
+            var button = document.getElementsByTagName("button")
+            for (i = 0; i < button.length; i++){
+                if (button[i].hasAttribute('onclick')){
+                    button[i].remove()
+                }
+            }
+            var qnt = document.getElementById("qnt").value;
+            var qnt = parseInt(qnt)
+            for (y = 0; y < qnt; y++){
+                console.log('Fazendo for')
+                var input = document.createElement("input")
+                
+                var span = document.createElement("span")
+                var div = document.createElement("div")
+                var form = document.getElementsByTagName("form")[0]
+                form.appendChild(div)
+                
+                div.appendChild(span, input)
+                div.appendChild(input)
+                input.id = `n${y+1}`
+                
+                input.setAttribute('type', "text")
+                span.innerHTML = `Nota ${y+1}`
+            }
+            var form = document.getElementsByTagName('form')[0]
+            var button = document.createElement("button")
+            form.appendChild(button)  
+            button.setAttribute('type', "submit")
+            button.innerHTML = 'Enviar'
+        }   
+    </script>-->
+</body>
+</html>
